@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Tabspace is a calm Chrome new tab workspace for tabs, bookmarks, notes, and focused reading."
+      content="Tabspace is a calm Chrome new tab workspace for tabs, bookmarks, reading, and local notes."
     />
     <link rel="icon" href="./assets/icon-128.png" />
     <link rel="stylesheet" href="./styles.css" />
-    <title>Tabspace - Calm New Tab Workspace</title>
+    <title>Tabspace — Calm New Tab Workspace</title>
   </head>
   <body>
     <header class="site-header">
@@ -18,141 +18,171 @@
         <span>Tabspace</span>
       </a>
       <nav aria-label="Primary navigation">
-        <a href="#workspace">Workspace</a>
+        <a href="#tabs">Tabs</a>
         <a href="#tasks">Tasks</a>
-        <a href="#reader">Reader Assist</a>
+        <a href="#bookmarks">Bookmarks</a>
+        <a href="#reader">Reader</a>
         <a href="#privacy">Privacy</a>
       </nav>
     </header>
 
     <main id="top">
+
+      <!-- ── HERO ── -->
       <section class="hero">
         <div class="hero-copy">
           <p class="eyebrow">Chrome new tab workspace</p>
-          <h1>Calm new tab workspace for busy browser days.</h1>
+          <h1>A quieter place to start your browser day.</h1>
           <p class="lead">
-            Tabspace is a local-first Chrome extension for organizing tabs, bookmarks, notes, and focused reading.
+            Tabspace replaces the default new tab with a focused workspace: open tabs by domain, lightweight tasks, a reading queue, local notes, and bookmark management — all in one place, nothing phoned home.
           </p>
           <div class="actions">
-            <a class="button primary" href="#install">Chrome Web Store - Coming Soon</a>
+            <a class="button primary" href="#install">Chrome Web Store — Coming Soon</a>
             <a class="button secondary" href="https://cassieliang6709.github.io/tabspace-privacy-policy/">Privacy policy</a>
           </div>
         </div>
-        <div class="hero-media" aria-label="Tabspace dashboard preview">
-          <img src="./assets/tabspace-dashboard.png" alt="Tabspace dashboard showing tab groups, reading queue, notes, and bookmarks." />
+        <div class="hero-media">
+          <img src="./assets/tabspace-dashboard.png" alt="Tabspace dashboard showing tab workspaces, reading queue, launchpad, and bookmark reference board." />
         </div>
       </section>
 
-      <section class="proof-band" aria-label="Product highlights">
-        <div>
-          <strong>Tabs</strong>
-          <span>Group by domain, close duplicates, and clean up active browser work.</span>
-        </div>
-        <div>
-          <strong>Tasks</strong>
-          <span>Attach intent to each workspace. Close with confidence, not guesswork.</span>
-        </div>
-        <div>
-          <strong>Bookmarks</strong>
-          <span>Search, browse, and organize reference folders from the new tab.</span>
-        </div>
-        <div>
-          <strong>Reading</strong>
-          <span>Focus line, local highlights, annotations, and a lightweight timer.</span>
-        </div>
-      </section>
+      <!-- ── PROOF BAND ── -->
+      <div class="proof-band" aria-label="Feature highlights">
+        <div><strong>Tabs</strong><span>Group by domain. Close duplicates. Create Chrome tab groups.</span></div>
+        <div><strong>Tasks</strong><span>Attach intent to workspaces. Gentle close when tasks are open.</span></div>
+        <div><strong>Bookmarks</strong><span>Search, browse, and clean up reference folders.</span></div>
+        <div><strong>Reader</strong><span>Focus line, local highlights, annotations on any page.</span></div>
+      </div>
 
-      <section id="workspace" class="section workspace-section">
-        <div class="section-copy">
+      <!-- ── TABS / MISSION CONTROL ── -->
+      <section id="tabs" class="feature-section">
+        <div class="feature-media">
+          <img src="./assets/tabspace-dashboard.png" alt="Mission Control showing tabs grouped by domain with duplicate counts and action buttons." />
+        </div>
+        <div class="feature-copy">
           <p class="eyebrow">Mission Control</p>
-          <h2>A dashboard for the tabs you actually have open.</h2>
-          <p>
-            Tabspace groups open pages by domain, exposes duplicates, and keeps cleanup actions close at hand
-            without turning your new tab into another noisy task manager.
-          </p>
-        </div>
-        <div class="feature-grid">
-          <article>
-            <span>01</span>
-            <h3>See your browser by workspace.</h3>
-            <p>GitHub, Gmail, docs, research pages, and local work show up as scannable groups.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Clean up without losing context.</h3>
-            <p>Close duplicate URLs, close a group, or keep pinned and active tabs protected.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Remember why you opened them.</h3>
-            <p>Attach tasks to any workspace. When you close a group, Tabspace surfaces what's still open.</p>
-          </article>
+          <h2>Your open tabs, organized by workspace.</h2>
+          <p>Every open page is grouped by domain into a scannable card. You see what you actually have open — not just a long flat list.</p>
+          <ul class="feature-list">
+            <li>Groups tabs by domain; filters out chrome://, about:, and browser internals</li>
+            <li>Shows duplicate URL count per group; one click closes all extras</li>
+            <li>Close a single tab, close a group, or close everything except pinned and active tabs</li>
+            <li>Create a native Chrome tab group per domain — named, colored, and collapsed automatically</li>
+            <li>Tab Spaces classify open pages into Study, Work, Play, and Other — open a space in a new focused window</li>
+            <li>Launchpad shortcuts: ChatGPT, Notion, GitHub, Gmail, Drive, Calendar, Reader guide</li>
+          </ul>
         </div>
       </section>
 
-      <section id="tasks" class="section tasks-section">
-        <div class="section-copy">
+      <!-- ── WORKSPACE TASKS ── -->
+      <section id="tasks" class="feature-section feature-section--flip">
+        <div class="feature-copy">
           <p class="eyebrow">Workspace Tasks</p>
-          <h2>A gentle brake before you close a workspace.</h2>
-          <p>
-            Most tab managers close everything and ask questions never. Tabspace lets you attach lightweight tasks
-            to each workspace — so when you close a group with open items, it asks what you want to do instead of just disappearing.
-          </p>
+          <h2>Remember why you opened those tabs.</h2>
+          <p>Each domain workspace can hold lightweight tasks. When you try to close a workspace that still has open items, Tabspace pauses and asks what you want to do instead of closing silently.</p>
+          <ul class="feature-list">
+            <li>Add tasks directly on any workspace card — they stay attached to that domain across sessions</li>
+            <li>Click a task to toggle it done; shows up to 2 tasks inline with a count for the rest</li>
+            <li>Closing a workspace with open tasks opens a modal: finish one and close, defer and close, or keep it open</li>
+            <li>Tasks persist in Chrome local storage — survive new tab refreshes</li>
+          </ul>
         </div>
-        <div class="tasks-cards">
-          <article class="task-card">
-            <p class="task-card-label">Per-workspace tasks</p>
-            <p>Add tasks directly on a workspace card. They stay attached to that domain group across sessions.</p>
-          </article>
-          <article class="task-card">
-            <p class="task-card-label">Inline editing</p>
-            <p>Click to toggle done. Tasks live on the card itself — no separate app, no extra context switch.</p>
-          </article>
-          <article class="task-card task-card-highlight">
-            <p class="task-card-label">Close dialog</p>
-            <p>Closing a workspace with open tasks surfaces a modal: finish one, defer them, or close anyway. Your call.</p>
-          </article>
+        <div class="feature-media">
+          <img src="./assets/tabspace-dashboard.png" alt="Workspace card showing task strip with open tasks and close modal dialog." />
         </div>
       </section>
 
-      <section id="reader" class="section reader-section">
-        <div class="reader-media">
-          <img src="./assets/reader-assist.png" alt="Reader Assist panel open on top of Tabspace." />
+      <!-- ── READING QUEUE + LOCAL NOTE ── -->
+      <section class="feature-section">
+        <div class="feature-media">
+          <img src="./assets/tabspace-dashboard.png" alt="Side rail showing Reading Queue and Local Note panels." />
         </div>
-        <div class="section-copy">
+        <div class="feature-copy">
+          <p class="eyebrow">Reading Queue &amp; Local Note</p>
+          <h2>Save it now. Come back when you're ready.</h2>
+          <p>The side rail keeps two small utilities beside your tab workspace — a read-later queue and a scratchpad that saves directly to your disk.</p>
+          <ul class="feature-list">
+            <li><strong>Reading Queue</strong> — save any tab for later from its workspace card; duplicate unfinished URLs are blocked automatically</li>
+            <li>Mark queue items done or remove them; completed items are hidden from the active list</li>
+            <li><strong>Local Note</strong> — type or paste text, set a filename, save as a .txt file directly to your computer</li>
+            <li>Uses the browser's file picker when available; falls back to Chrome downloads API otherwise</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ── BOOKMARKS ── -->
+      <section id="bookmarks" class="feature-section feature-section--flip">
+        <div class="feature-copy">
+          <p class="eyebrow">Reference Board</p>
+          <h2>Bookmarks as a searchable reference shelf.</h2>
+          <p>Your Chrome bookmark folders become scannable reference cards with a live search across title, URL, domain, and folder path. Organize mode lets you clean up without leaving the new tab.</p>
+          <ul class="feature-list">
+            <li>Reads your full bookmark tree; displays each folder as a collapsible card</li>
+            <li>Search across title, URL, hostname, and folder path simultaneously</li>
+            <li><strong>Organize mode</strong> — select bookmarks with checkboxes, move to an existing or new folder, or delete after confirmation</li>
+            <li><strong>Duplicate Detector</strong> — finds same-URL duplicates and same-domain/same-title near-duplicates; select extras in one click</li>
+            <li><strong>Unfiled Cleanup</strong> — suggests a domain-based folder for loose bookmarks; one click moves them all</li>
+          </ul>
+        </div>
+        <div class="feature-media">
+          <img src="./assets/tabspace-dashboard.png" alt="Bookmark Reference Board showing folder cards, search bar, and Organize mode with duplicate detector." />
+        </div>
+      </section>
+
+      <!-- ── READER ASSIST ── -->
+      <section id="reader" class="feature-section">
+        <div class="feature-media">
+          <img src="./assets/reader-assist.png" alt="Reader Assist panel open on a webpage showing focus line, annotation toolbar, and timer." />
+        </div>
+        <div class="feature-copy">
           <p class="eyebrow">Reader Assist</p>
-          <h2>When an article matters, make the page quieter.</h2>
-          <p>
-            Reader Assist adds focus controls to ordinary webpages: move through reading blocks, highlight
-            selected text, save local annotations, and start a 15-minute reading timer.
-          </p>
-          <div class="reader-points">
-            <span>Focus Line</span>
-            <span>Immersive Reading</span>
-            <span>Local Annotations</span>
-            <span>15 Minute Timer</span>
+          <h2>Make any article easier to read and annotate.</h2>
+          <p>A content script injected into every webpage adds a lightweight reading layer — no page modifications, no data sent anywhere. Activate it from the Tabspace launchpad guide.</p>
+          <ul class="feature-list">
+            <li><strong>Focus Line</strong> — highlights your current reading block; surrounding content fades back</li>
+            <li>Navigate blocks with <kbd>J</kbd> / <kbd>K</kbd> or arrow keys; press <kbd>Esc</kbd> to exit</li>
+            <li><strong>Annotations</strong> — select text to get a toolbar: Yellow, Concept, Action, Question, Skim, Underline</li>
+            <li>Annotation shortcuts: <kbd>Y</kbd> Yellow · <kbd>B</kbd> Concept · <kbd>A</kbd> Action · <kbd>Q</kbd> Question · <kbd>S</kbd> Skim · <kbd>U</kbd> Underline</li>
+            <li>Highlights saved to Chrome local storage and restored on the same URL next visit</li>
+            <li>15-minute reading timer included</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ── PRIVACY ── -->
+      <section id="privacy" class="privacy-section">
+        <div class="privacy-copy">
+          <p class="eyebrow">Local-first</p>
+          <h2>Everything stays in your browser.</h2>
+        </div>
+        <div class="privacy-cards">
+          <div class="privacy-card">
+            <strong>No remote server</strong>
+            <p>Tabspace never sends your tabs, bookmarks, notes, annotations, or browsing activity anywhere.</p>
+          </div>
+          <div class="privacy-card">
+            <strong>Chrome local storage only</strong>
+            <p>Reading queue, workspace tasks, and Reader Assist annotations are stored in Chrome extension-local storage on your machine.</p>
+          </div>
+          <div class="privacy-card">
+            <strong>No ads, no analytics</strong>
+            <p>No ad network, no usage telemetry, no resale of browsing data. The extension has no network requests of its own.</p>
+          </div>
+          <div class="privacy-card">
+            <strong>Permissions explained</strong>
+            <p><code>tabs</code> + <code>tabGroups</code> to read and organize open tabs. <code>bookmarks</code> to display and edit your saved bookmarks. <code>storage</code> for queue and annotations. <code>downloads</code> for Local Note file saving.</p>
           </div>
         </div>
       </section>
 
-      <section id="privacy" class="section privacy-section">
-        <div class="section-copy">
-          <p class="eyebrow">Local-first</p>
-          <h2>Your tabs and notes stay in your browser.</h2>
-        </div>
-        <div class="privacy-list">
-          <p>Tabspace does not send your tabs, bookmarks, notes, annotations, browsing activity, or webpage content to a remote server.</p>
-          <p>Reading queue items, extension settings, and Reader Assist annotations use Chrome local extension storage.</p>
-          <p>No ads. No resale of user data. No analytics pipeline for your browsing history.</p>
-        </div>
-      </section>
-
+      <!-- ── INSTALL ── -->
       <section id="install" class="install-section">
         <p class="eyebrow">Install</p>
         <h2>Built for people who think with too many tabs open.</h2>
         <p>Tabspace is preparing for Chrome Web Store review. The first release is focused on a clean, local-first workflow.</p>
         <a class="button primary" href="https://chromewebstore.google.com/" aria-disabled="true">Chrome Web Store link coming soon</a>
       </section>
+
     </main>
 
     <footer>
