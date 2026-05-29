@@ -183,7 +183,7 @@ h1 {
 
 .proof-band {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin-bottom: 62px;
   border: 3px solid var(--line);
   border-radius: 8px;
@@ -270,6 +270,46 @@ h3 {
   line-height: 1.05;
 }
 
+.tasks-section {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.tasks-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.task-card {
+  min-height: 180px;
+  padding: 24px;
+  border: 3px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: var(--small-shadow);
+}
+
+.task-card-highlight {
+  background: color-mix(in srgb, var(--gold) 22%, #ffffff);
+}
+
+.task-card-label {
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 950;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.task-card p:last-child {
+  color: var(--muted);
+  margin: 0;
+}
+
 .reader-section {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
@@ -351,6 +391,7 @@ footer span {
 @media (max-width: 920px) {
   .hero,
   .workspace-section,
+  .tasks-section,
   .reader-section,
   .privacy-section {
     grid-template-columns: 1fr;
@@ -365,7 +406,8 @@ footer span {
   }
 
   .proof-band,
-  .feature-grid {
+  .feature-grid,
+  .tasks-cards {
     grid-template-columns: 1fr;
   }
 
